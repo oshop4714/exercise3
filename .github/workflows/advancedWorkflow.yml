@@ -11,12 +11,12 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v5.0.0
      - name: Print to Log
-        id: print-to-log
-        uses: actions/hello-world-javascript-action@main
-        with:
+       id: print-to-log
+       uses: actions/hello-world-javascript-action@main
+       with:
           who-to-greet: ${{ github.actor }} #GITHUB_ACTOR
-      - name: time
-        run: |
+     - name: time
+       run: |
          echo "The time of the greeting was at: ${{ steps.print-to-log.outputs.time }}
          
  secondjob:
